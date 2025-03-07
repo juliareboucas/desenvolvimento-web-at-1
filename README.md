@@ -1,14 +1,14 @@
-#Teste dos endpoints com postman
+#Teste dos endpoints com postman#
 ![image](https://github.com/user-attachments/assets/cc2a20d9-17aa-4681-80bb-a28bd441bec9)
-#POST
+#POST#
 ![image](post.png)
-#GET
+#GET#
 ![image](get.png)
-#UPDATE
+#UPDATE#
 ![image](put-id.png)
-#GET{id}
+#GET{id}#
 ![image](get-id.png)
-#DELETE{id}
+#DELETE{id}#
 ![image](delete-id.png)
-#GET 
+#GET#
 ![image](get-post-update.png)
