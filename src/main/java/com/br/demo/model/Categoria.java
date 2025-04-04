@@ -1,19 +1,28 @@
 package com.br.demo.model;
 
+import jakarta.persistence.*;
+
+import java.util.List;
+
+@Entity
 public class Categoria {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String descricao;
+
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+    private List<Produto> produtos;
+
+    public Categoria() {
+    }
 
     public Categoria(Long id, String nome, String descricao) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
-    }
-
-    public Categoria(Long id, String nome) {
-        this(id, nome, null);
     }
 
     public Long getId() {
@@ -40,6 +49,11 @@ public class Categoria {
         this.descricao = descricao;
     }
 
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
 
-
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
+    }
 }

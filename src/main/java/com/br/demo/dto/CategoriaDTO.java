@@ -5,17 +5,15 @@ public class CategoriaDTO {
     private String nome;
     private String descricao;
 
-
-    public CategoriaDTO() {}
-
-
-    public CategoriaDTO(Long id, String nome, String descricao) {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
+    public CategoriaDTO() {
     }
 
-    // Getters e Setters
+    public CategoriaDTO(Long id, String nome, String descricao) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
